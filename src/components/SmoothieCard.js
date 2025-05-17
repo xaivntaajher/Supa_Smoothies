@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import supabase from "../config/supabaseClient";
 
 const SmoothieCard = ({ smoothie, onDelete }) => {
+  const createdAt = new Date(smoothie.created_at).toLocaleString();
+
   const handleDelete = async () => {
     const { data, error } = await supabase
       .from("smoothies")
@@ -23,6 +25,7 @@ const SmoothieCard = ({ smoothie, onDelete }) => {
       <h3>{smoothie.title}</h3>
       <p>{smoothie.method}</p>
       <div className="rating">{smoothie.rating}</div>
+      <p className="timestamp">Created at: {createdAt}</p>
       <div className="buttons">
         <Link to={"/" + smoothie.id}>
           <i className="material-icons">edit</i>
