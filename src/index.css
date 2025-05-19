@@ -122,3 +122,47 @@ form button {
   color: #666;
   margin-top: 8px;
 }
+
+@media (max-width: 768px) {
+  nav {
+    padding: 20px 10px;
+  }
+
+  nav h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+    font-size: 1.1rem;
+  }
+
+  .page {
+    padding: 10px;
+  }
+
+  .smoothie-grid {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 20px;
+  }
+
+  form {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .smoothie-card {
+    padding: 15px;
+  }
+
+  .order-by {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order-by button {
+    width: 100%;
+  }
+}
