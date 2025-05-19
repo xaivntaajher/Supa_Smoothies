@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"; // import Analytics
 
 // pages
-import Home from "./pages/Home"
-import Create from "./pages/Create"
-import Update from "./pages/Update"
-
+import Home from "./pages/Home";
+import Create from "./pages/Create";
+import Update from "./pages/Update";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path="/create" element={<Create />} />
         <Route path="/:id" element={<Update />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
